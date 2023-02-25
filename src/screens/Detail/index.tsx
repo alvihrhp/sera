@@ -70,7 +70,11 @@ const Detail: React.FC<Props> = () => {
         {Object.keys(pokemon).length > 0 ? (
           <div className="border border-blue w-full max-w-[425px] rounded-lg p-2 mt-8 flex flex-wrap md:justify-center gap-[0.925rem]">
             <div className="w-[48%]">
-              <img src={pokemon.sprite} className="w-full" />
+              <img
+                src={pokemon.sprite}
+                className="w-full"
+                data-testid="image-pokemon"
+              />
               <div className="w-full flex flex-wrap justify-center gap-2">
                 {pokemon.types.map(
                   (type: Record<string, string>, typeIdx: number) => (
@@ -110,7 +114,7 @@ const Detail: React.FC<Props> = () => {
               </div>
             </div>
             <div className="w-[48%] flex flex-col justify-center items-end p-2">
-              <div className="w-full">
+              <div className="w-full" data-testid="pokemon-hp">
                 <FontAwesomeIcon
                   icon={["fas", "laptop-medical"]}
                   size="xl"
@@ -120,7 +124,7 @@ const Detail: React.FC<Props> = () => {
                   {pokemon.baseStats.hp}% HP
                 </span>
               </div>
-              <div className="w-full mt-3">
+              <div className="w-full mt-3" data-testid="pokemon-attack">
                 <FontAwesomeIcon
                   icon={["fas", "hand-fist"]}
                   size="xl"
@@ -130,7 +134,7 @@ const Detail: React.FC<Props> = () => {
                   {pokemon.baseStats.hp}% Attack
                 </span>
               </div>
-              <div className="w-full mt-3">
+              <div className="w-full mt-3" data-testid="pokemon-defense">
                 <FontAwesomeIcon
                   icon={["fas", "shield"]}
                   size="xl"
@@ -140,7 +144,7 @@ const Detail: React.FC<Props> = () => {
                   {pokemon.baseStats.hp}% Defense
                 </span>
               </div>
-              <div className="w-full mt-3">
+              <div className="w-full mt-3" data-testid="pokemon-speed">
                 <FontAwesomeIcon
                   icon={["fas", "wind"]}
                   size="xl"

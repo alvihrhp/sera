@@ -8,7 +8,7 @@ interface Props {
 
 const Badge: React.FC<Props> = ({ style, text, textStyle }) => {
   return (
-    <div className={`shadow rounded-lg ${style}`}>
+    <div className={`shadow rounded-lg ${style}`} data-testid="pokemon-types">
       <p className={textStyle}>{text}</p>
     </div>
   );

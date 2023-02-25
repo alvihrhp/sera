@@ -148,6 +148,7 @@ const Home: React.FC<Props> = () => {
                         <img
                           src={pokemon.sprite}
                           className="w-[90px] h-[90px]"
+                          data-testid="image-pokemon"
                         />
                       </div>
                       <div className="w-full flex flex-wrap mt-2 gap-1">
@@ -175,6 +176,7 @@ const Home: React.FC<Props> = () => {
                   <div
                     className="w-[48%] md:w-[30%] h-[154.49px] lg:w-[24%] xl:gap-[1.15rem] bg-neutral-400 rounded animate-pulse"
                     key={skeletonIdx}
+                    data-testid="loading-fetch-pokemon"
                   ></div>
                 ))}
         </div>
