@@ -6,14 +6,23 @@ import reportWebVitals from "./reportWebVitals";
 /** Apollo Client */
 import { ApolloProvider } from "@apollo/client";
 import { client } from "./helper";
+/** React Router */
+import { BrowserRouter } from "react-router-dom";
+/** Font Awesome */
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
+library.add(fas);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
